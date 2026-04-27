@@ -1,0 +1,2 @@
+import type { RawAnswer } from "@/types/domain";
+export async function extractPracticesFromAnswers({answers,categories}:{answers:RawAnswer[];categories:string[]}){return answers.filter(a=>a.answerText.trim()).slice(0,3).map((a,i)=>({category:categories[i%Math.max(categories.length,1)]||'General',name:`Practice ${i+1}`,description:a.answerText,sourceAnswerIds:[a.questionId],maturity:'not_clear',repeatability:'medium',evidenceStrength:'low',tags:[]}));}

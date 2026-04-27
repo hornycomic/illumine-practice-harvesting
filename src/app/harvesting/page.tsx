@@ -1,0 +1,2 @@
+import { AppShell } from "@/components/AppShell";import { Card } from "@/components/Card";
+export default function HarvestingPage(){return <AppShell title="Harvesting session"><Card><h2 className="font-semibold">XYZ Highway Fuel Station</h2><p className="text-sm text-slate-600">Assigned model: Highway RO</p><div className="mt-5 space-y-4"><label>What actual practices are followed?</label><textarea rows={5}/><label>Observations</label><textarea rows={4}/><button className="btn">Submit session</button></div></Card></AppShell>}
